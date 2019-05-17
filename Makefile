@@ -19,13 +19,13 @@ FLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME):
-		gcc $(FLAGS) -c $(SRC)
-		ar rc $(NAME) $(OBJ)
+	gcc $(FLAGS) -c $(SRC)
+	ar rc $(NAME) $(OBJ)
 
 clean:
-		rm -f $(SRCO)
+	rm -f $(SRCO)
 
 fclean: clean
-		rm -f $(NAME)
+	rm -f $(NAME)
 
-re: fclean all
+re:	fclean all

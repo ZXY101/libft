@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 13:28:49 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/20 14:14:16 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/20 11:02:42 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/20 13:29:50 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_isalpha.c"
-#include <stdio.h>
-#include <ctype.h>
-
-int		main ()
+int    ft_isalpha(int c)
 {
-
-	printf("%d", ft_isalpha('a'));
-	return (0);
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+      return (1);
+    return (0);
 }

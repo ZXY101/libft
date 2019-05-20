@@ -6,33 +6,31 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:35:28 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/20 14:14:42 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/20 17:56:43 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-    int     ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-    int neg;
-    int i;
-    int num;
+	int neg;
+	int i;
+	int num;
 
-    i = 0;
-    neg = 1;
-    num = 0;
-    while (str[i] <= ' ')
-        i++;
-    if (str[i] == '-' || str[i] == '+')
-    {
-        if (str[i] == '-')
-            neg *= -1;
-        i++;
-    }       
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        num = num * 10 + (str[i] - 48);
-        i++;
-    }
-    return (num * neg);
-} 
-
+	i = 0;
+	neg = 1;
+	num = 0;
+	while (str[i] <= ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			neg *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = num * 10 + (str[i] - 48);
+		i++;
+	}
+	return (num * neg);
+}

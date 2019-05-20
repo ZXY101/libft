@@ -6,7 +6,7 @@
 #    By: stenner <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/17 13:35:09 by stenner           #+#    #+#              #
-#    Updated: 2019/05/17 13:40:22 by stenner          ###   ########.fr        #
+#    Updated: 2019/05/20 15:12:44 by stenner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
+	ar rc $(NAME) $(SRCO)
 
 clean:
 	rm -f $(SRCO)

@@ -6,17 +6,17 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 13:28:49 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/20 14:14:16 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/20 14:40:29 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_isalpha.c"
+#include "ft_isdigit.c"
 #include <stdio.h>
 #include <ctype.h>
 
 int		main ()
 {
 
-	printf("%d", ft_isalpha('a'));
+	printf("%d", ft_isdigit('9'));
 	return (0);
 }

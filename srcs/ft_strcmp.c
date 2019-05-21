@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 13:28:49 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/21 14:02:34 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/21 13:07:02 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/21 13:44:45 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
-#include <stdio.h>
-#include <ctype.h>
-
-/*
-int		main (int argc, char **argv)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	(void)argc;
+	int i;
 
-	printf("%c\n", ft_strstr(argv[1][0]));
-	return (0);
-}
-*/
-
-int main () {
-   const char haystack[20] = "int";
-   const char needle[10] = "Point";
-   char *ret;
-
-   ret = ft_strnstr(haystack, needle, 4);
-
-   printf("The substring is: %s\n", ret);
-   
-   return(0);
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+			break ;
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

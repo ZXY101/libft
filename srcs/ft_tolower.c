@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 13:28:49 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/20 15:07:05 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/21 10:15:52 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/21 10:17:28 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-#include <stdio.h>
-#include <ctype.h>
-
-int		main ()
+int		ft_tolower(int c)
 {
-
-	printf("%d", ft_isascii(176));
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c += 32);
+	return (c);
 }

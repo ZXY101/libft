@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:46:32 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/21 09:12:16 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/17 13:28:49 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/21 10:18:09 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+#include "./includes/libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int		main (int argc, char **argv)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	(void)argc;
+
+	printf("%c\n", ft_tolower(argv[1][0]));
 	return (0);
 }

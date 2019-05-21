@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:46:32 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/21 09:12:16 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/21 10:23:04 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/21 10:43:08 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+#include "../includes/libft.h"
+
+char *ft_strstr(const char *haystack, const char *needle)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	if (needle == NULL)
+		return(haystack);
+	while (haystack[i] != '\0')
+	{
+		while (needle[j] != '\0')
+		{
+			if (needle[j] == haystack[i])
+				j++;
+			else
+				return (NULL);
+			i++;
+		}
+		return (needle);
+	}
+	return (needle);
 }

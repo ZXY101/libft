@@ -6,7 +6,7 @@
 #    By: stenner <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/17 13:35:09 by stenner           #+#    #+#              #
-#    Updated: 2019/05/20 15:12:44 by stenner          ###   ########.fr        #
+#    Updated: 2019/05/21 09:40:22 by stenner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 INC = includes/libft.h
 SRC = srcs/*.c
 SRCO = *.o
+EXEC = a.out
 FLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
@@ -28,4 +29,7 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re:	fclean all
+ffclean: fclean
+	rm -f $(EXEC)
+
+re:	ffclean all

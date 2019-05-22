@@ -37,6 +37,7 @@ int main() {
 }
 */
 
+/*
 int main () {
    char src[50], dest[50];
 
@@ -49,7 +50,20 @@ int main () {
 
    return(0);
 }
+*/
 
+int main () {
+   char src[50], dest[50];
+
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+
+   ft_strncat(dest, src, 10);
+
+   printf("Final destination string : |%s|\n", dest);
+   
+   return(0);
+}
 /*
 int main () {
    const char haystack[20] = "int";

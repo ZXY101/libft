@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 14:08:54 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/22 14:55:21 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/22 15:15:13 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/22 15:49:33 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+size_t	ft_strlcat(char *st, const chat *src, size_t dstsize)
 {
 	int i;
 	int s1_len;
@@ -21,11 +21,4 @@ char	*ft_strcat(char *s1, const char *s2)
 	i = 0;
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	while (i < s2_len && s2[i] != '\0')
-	{
-		s1[s1_len + i] = s2[i];
-		i++;
-	}
-	s1[s1_len + i] = '\0';
-	return (s1);
 }

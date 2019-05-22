@@ -6,13 +6,13 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 07:42:45 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/22 09:19:20 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/22 09:31:14 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strcpy(char *dst,const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int len;
 	int i;

@@ -7,7 +7,9 @@ int		main (int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
-	printf("%d\n", ft_atoi("\\      123a213"));
+	char dest[]= "heldfgdfg";
+	char src[]="mmmmm";
+	printf("%s\n", ft_strcpy(dest, src));
 	return (0);
 }
 

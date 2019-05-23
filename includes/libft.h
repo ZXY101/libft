@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:42:10 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/23 09:41:02 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/23 11:23:48 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,6 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
 #endif

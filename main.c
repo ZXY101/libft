@@ -2,13 +2,25 @@
 #include <stdio.h>
 #include <ctype.h>
 
-
+/*
 int		main (int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
 	printf("%s\n", ft_strrchr("abcdeaf", 'a'));
 	return (0);
+}
+*/
+int main () {
+   char str[50];
+
+   strcpy(str,"This is string.h library function");
+   puts(str);
+
+   bzero(str,7);
+   puts(str);
+   
+   return(0);
 }
 
 /*

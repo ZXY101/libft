@@ -2,17 +2,15 @@
 #include <stdio.h>
 #include <ctype.h>
 
-/*
+
 int		main (int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
-	char dest[]= "heldfgdfg";
-	char src[]="mmmmm";
-	printf("%s\n", ft_strcpy(dest, src));
+	printf("%s\n", ft_strrchr("abcdeaf", 'a'));
 	return (0);
 }
-*/
+
 /*
 int main () {
    char src[40];
@@ -51,7 +49,7 @@ int main () {
    return(0);
 }
 */
-
+/*
 int main () {
    char src[50], dest[50];
 
@@ -64,6 +62,7 @@ int main () {
    
    return(0);
 }
+*/
 /*
 int main () {
    const char haystack[20] = "int";

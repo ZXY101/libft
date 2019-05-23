@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 15:15:13 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/22 15:49:33 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/23 09:35:44 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/23 09:42:08 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t	ft_strlcat(char *st, const chat *src, size_t dstsize)
+char	*ft_strrchr(const char *s, int c)
 {
 	int i;
-	int s1_len;
-	int s2_len;
 
-	i = 0;
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
+	i = ft_strlen(s);
+	if ((char)c == '\0')
+		return ((char*)s + i);
+	while (i != 0)
+	{
+		if (s[i] == (char)c)
+			return ((char*)s + i);
+		i--;
+	}
+	return (NULL);
 }

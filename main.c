@@ -11,6 +11,7 @@ int		main (int argc, char **argv)
 	return (0);
 }
 */
+/*
 int main () {
    char str[50];
 
@@ -22,6 +23,24 @@ int main () {
    
    return(0);
 }
+*/
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+char *msg = "This is the string: not copied";
+
+int main() {
+
+    char buffer[80];
+    memset( buffer, '\0', 80 );
+    ft_memccpy( buffer, msg, ':', 80 );
+    printf( "%s\n", buffer );
+    return (0);
+  }
+
 
 /*
 int main () {

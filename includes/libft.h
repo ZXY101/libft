@@ -18,6 +18,7 @@
 # include <errno.h>
 
 size_t	ft_strlen(const char *str);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);

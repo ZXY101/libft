@@ -2,15 +2,12 @@
 #include <stdio.h>
 #include <ctype.h>
 
-/*
 int		main (int argc, char **argv)
 {
 	(void)argc;
-	(void)argv;
-	printf("%s\n", ft_strrchr("abcdeaf", 'a'));
+	ft_putstr(argv[1]);
 	return (0);
 }
-*/
 /*
 int main () {
    char str[50];
@@ -38,9 +35,7 @@ int main() {
   }
 */
 
-
-
-
+/*
 int main () {
    char str1[15];
    char str2[15];
@@ -60,7 +55,9 @@ int main () {
    }
    
    return(0);
-}/*
+}
+*/
+/*
 int main () {
    char src[40];
    char dest[12];

@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 16:51:54 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/27 17:07:50 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/27 17:21:23 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnew(size_t size)
 		return (NULL);
 	else
 	{
-		ft_bzero(str, size + 1);
+		ft_memset(str, '\0', size + 1);
 	}
 	return (str);
 }

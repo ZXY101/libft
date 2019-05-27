@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:35:28 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/27 17:44:26 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/27 17:25:02 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/27 17:30:47 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int neg;
-	int i;
-	int num;
+#include "../includes/libft.h"
 
-	i = 0;
-	neg = 1;
-	num = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-	|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+void	*ft_memalloc(size_t size)
+{
+	void *mem;
+
+	mem = malloc(size);
+	if (!(mem))
+		return (NULL);
+	else
 	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
+		ft_bzero(mem, size);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num * 10 + (str[i] - 48);
-		i++;
-	}
-	return (num * neg);
+	return (mem);
 }

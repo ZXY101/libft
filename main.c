@@ -6,7 +6,12 @@ int		main (int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
-	ft_putstr(ft_strtrim("     "));
+	char *s1 = "where is my ";
+	char *s2 = "malloc ???";
+
+	char *res = ft_strjoin(s1, s2);
+
+	ft_putstr(res);
 	return (0);
 }
 /*

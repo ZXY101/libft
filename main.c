@@ -5,7 +5,8 @@
 int		main (int argc, char **argv)
 {
 	(void)argc;
-	ft_putstr(argv[1]);
+	(void)argv;
+	ft_putstr(ft_strtrim("     "));
 	return (0);
 }
 /*

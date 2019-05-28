@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:52:40 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/22 14:03:59 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/28 15:15:43 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		leng++;
 	}
 	leng++;
-	if (leng == 0)
-		return (dst);
 	while (i < leng && (size_t)i < len)
 	{
 		dst[i] = src[i];

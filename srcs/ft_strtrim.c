@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 13:27:20 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/28 13:54:35 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/28 13:55:36 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/28 15:39:55 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include <stdio.h>
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s)
 {
-	size_t	i;
-	char	*sub;
+	int		i;
+	int		len;
+	int		size;
+	char	*str;
 
 	if (!s)
 		return (NULL);
 	i = 0;
-	if (!(sub = (char*)malloc(sizeof(char) * len + 1)))
-		return (NULL);
-	while (i < len)
-	{
-		sub[i] = s[start];
+	len = ft_strlen(s);
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-		start++;
-	}
-	sub[i] = '\0';
-	return (sub);
+	while (s[len] == ' ' || s[len] == '\n' || s[len] == '\t' || s[len] == '\0')
+		len--;
+	if (len > 0)
+		size = (len - i) + 1;
+	else
+		size = 0;
+	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	ft_memcpy(str, s + i, (size_t)size);
+	str[size] = '\0';
+	return (str);
 }

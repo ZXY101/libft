@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 17:39:19 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/28 18:33:26 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/29 12:07:22 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,30 @@
 static int	count_elements(char const *s, char c)
 {
 	int 	i;
+	int		j;
 	int		count;
 
 	i = 0;
+	j = 0;
 	count = 0;
+	if (ft_strlen(s) == 0)
+		return (0);
+	while (s[i] == c)
+		i++;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i - 1] != c && s[i + 1] != c && s[i + 1] != '\0')
+		j = i;
+		if (s[i] != c)
+		{
+			while (s[j] != c && s[j + 1] != '\0')
+			{
+				j++;
+				i++;
+			}
 			count++;
+		}
 		i++;
 	}
-	count++;
 	return (count);
 }
 
@@ -44,7 +57,6 @@ char	**ft_strsplit(char const *s, char c)
 	j = 0;
 	x = 0;
 	element_count = count_elements(s, c);
-	ft_putnbr(element_count);
 	array = (char**)malloc(sizeof(char*) * element_count);
 	if (!array)
 		return (NULL);
@@ -52,18 +64,27 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
+		j = i;
 		while (s[j] != c && s[j] != '\0')
 		{
 			j++;
 		}
-		str = (char*)malloc(sizeof(char) * j);
+		str = (char*)malloc(sizeof(char) * ((j - i) + 1));
 		if (!str)
 			return (NULL);
 		ft_memcpy(str, s + i, (j - i));
-		printf("(%s)", str);
-		array[x] = str;
+		str[j] = '\0';
+		printf("String: (%s)(j:%c)( j - i: %d)(%zu)\n", str, str[j], j-i, ft_strlen(str));
+		array[x] = ft_strdup(str);
+		ft_strclr(str);
+		ft_strdel(&str);
 		x++;
 		i = j;
 	}
+	printf("Words: (%d)\n", element_count);
+	int a;
+	for (a = 0;a < x; a++)
+		printf("%s\n", array[a]);
+	array[x] = NULL;
 	return (array);
 }

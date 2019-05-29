@@ -6,7 +6,9 @@ int		main (int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
-	ft_strsplit("how *mate***", '*');
+	char *string = "      split       this for   me  !       ";
+	ft_strsplit(string, ' ');
+	//ft_strsplit("*hello*fellow***students*", '*');
 	return (0);
 }
 /*

@@ -6,9 +6,11 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:35:28 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/27 17:44:26 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/30 17:06:54 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libft.h"
 
 int		ft_atoi(const char *str)
 {

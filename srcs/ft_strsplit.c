@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 17:39:19 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/30 13:19:02 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/30 18:04:53 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,6 @@ static int	count_elements(char const *s, char c)
 	}
 	return (count);
 }
-
-struct		s_vars
-{
-	int		i;
-	int		j;
-	int		start;
-	int		char_count;
-	char	*str;
-};
 
 static char	**make_array(char const *s, char c, int element_count, char **array)
 {

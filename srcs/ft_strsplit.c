@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 17:39:19 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/30 11:51:34 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/30 13:19:02 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 static int	count_elements(char const *s, char c)
 {
 	int		i;
-	int		j;
 	int		count;
 
 	i = 0;
-	j = 0;
 	count = 0;
 	if (ft_strlen(s) == 0)
 		return (0);
@@ -27,10 +25,9 @@ static int	count_elements(char const *s, char c)
 		i++;
 	while (s[i] != '\0')
 	{
-		j = i;
 		if (s[i] != c)
 		{
-			while (s[j++] != c && s[j + 1] != '\0')
+			while (s[i] != c && s[i] != '\0')
 				i++;
 			count++;
 		}
@@ -71,8 +68,8 @@ static char	**make_array(char const *s, char c, int element_count, char **array)
 		ft_strclr(a.str);
 		ft_strdel(&a.str);
 		a.i++;
-		array[a.i] = NULL;
 	}
+	array[a.i] = NULL;
 	return (array);
 }
 

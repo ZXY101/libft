@@ -6,15 +6,15 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 17:39:19 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/29 12:07:22 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:51:34 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-#include <stdio.h>
+
 static int	count_elements(char const *s, char c)
 {
-	int 	i;
+	int		i;
 	int		j;
 	int		count;
 
@@ -30,11 +30,8 @@ static int	count_elements(char const *s, char c)
 		j = i;
 		if (s[i] != c)
 		{
-			while (s[j] != c && s[j + 1] != '\0')
-			{
-				j++;
+			while (s[j++] != c && s[j + 1] != '\0')
 				i++;
-			}
 			count++;
 		}
 		i++;
@@ -42,49 +39,56 @@ static int	count_elements(char const *s, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+struct		s_vars
 {
 	int		i;
 	int		j;
-	int		x;
+	int		start;
+	int		char_count;
+	char	*str;
+};
+
+static char	**make_array(char const *s, char c, int element_count, char **array)
+{
+	struct s_vars a;
+
+	a.i = 0;
+	a.j = 0;
+	while (a.i < element_count)
+	{
+		a.char_count = 0;
+		while (s[a.j] == c)
+			a.j++;
+		a.start = a.j;
+		while (s[a.j] != c && s[a.j++] != '\0')
+			a.char_count++;
+		a.str = (char*)malloc(sizeof(char) * (a.char_count + 1));
+		if (!a.str)
+			return (NULL);
+		ft_memcpy(a.str, s + a.start, a.char_count);
+		a.str[a.char_count] = '\0';
+		array[a.i] = ft_strdup(a.str);
+		ft_strclr(a.str);
+		ft_strdel(&a.str);
+		a.i++;
+		array[a.i] = NULL;
+	}
+	return (array);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
 	int		element_count;
 	char	**array;
-	char	*str;
 
 	if (!s || !c)
 		return (NULL);
-	i = 0;
-	j = 0;
-	x = 0;
 	element_count = count_elements(s, c);
 	array = (char**)malloc(sizeof(char*) * element_count);
 	if (!array)
 		return (NULL);
-	while (x < element_count)
-	{
-		while (s[i] == c)
-			i++;
-		j = i;
-		while (s[j] != c && s[j] != '\0')
-		{
-			j++;
-		}
-		str = (char*)malloc(sizeof(char) * ((j - i) + 1));
-		if (!str)
-			return (NULL);
-		ft_memcpy(str, s + i, (j - i));
-		str[j] = '\0';
-		printf("String: (%s)(j:%c)( j - i: %d)(%zu)\n", str, str[j], j-i, ft_strlen(str));
-		array[x] = ft_strdup(str);
-		ft_strclr(str);
-		ft_strdel(&str);
-		x++;
-		i = j;
-	}
-	printf("Words: (%d)\n", element_count);
-	int a;
-	for (a = 0;a < x; a++)
-		printf("%s\n", array[a]);
-	array[x] = NULL;
+	array = make_array(s, c, element_count, array);
+	if (!array)
+		return (NULL);
 	return (array);
 }

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:40:57 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/30 16:29:07 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/30 14:33:45 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/30 16:51:24 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *))
+int		ft_numlen(long num)
 {
-	int i;
+	int len;
 
-	i = 0;
-	if (s && f)
+	len = 0;
+	if (num < 0)
 	{
-		while (s[i] != '\0')
-		{
-			f(s + i);
-			i++;
-		}
+		num = num * -1;
+		len++;
 	}
+	while (num > 0)
+	{
+		num = num / 10;
+		len++;
+	}
+	return (len);
 }

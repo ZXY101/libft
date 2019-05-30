@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:40:57 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/30 16:29:07 by stenner          ###   ########.fr       */
+/*   Created: 2019/05/30 14:14:31 by stenner           #+#    #+#             */
+/*   Updated: 2019/05/30 16:50:47 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *))
-{
-	int i;
+#include "../includes/libft.h"
 
-	i = 0;
-	if (s && f)
+char	*ft_itoa(int num)
+{
+	int		i;
+	long	n;
+	char	*str;
+
+	n = num;
+	i = ft_numlen(n);
+	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	str[i--] = '\0';
+	if (n == 0)
 	{
-		while (s[i] != '\0')
-		{
-			f(s + i);
-			i++;
-		}
+		str[0] = 48;
+		return (str);
 	}
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = n * -1;
+	}
+	while (n > 0)
+	{
+		str[i--] = 48 + (n % 10);
+		n = n / 10;
+	}
+	return (str);
 }

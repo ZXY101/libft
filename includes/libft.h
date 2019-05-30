@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:42:10 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/28 17:38:51 by stenner          ###   ########.fr       */
+/*   Updated: 2019/05/30 16:48:58 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,9 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
+char 	*ft_itoa(int num);
+/*
+**Bonus
+*/
+int		ft_numlen(long num);
 #endif

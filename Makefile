@@ -6,13 +6,13 @@
 #    By: stenner <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/17 13:35:09 by stenner           #+#    #+#              #
-#    Updated: 2019/05/27 14:38:50 by stenner          ###   ########.fr        #
+#    Updated: 2019/05/31 11:52:23 by stenner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 INC = includes/libft.h
-SRC = srcs/*.c
+SRC = *.c
 SRCO = *.o
 EXEC = a.out
 FLAGS = -Wall -Werror -Wextra

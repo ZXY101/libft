@@ -6,7 +6,7 @@
 #    By: stenner <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/17 13:35:09 by stenner           #+#    #+#              #
-#    Updated: 2019/06/03 16:39:37 by stenner          ###   ########.fr        #
+#    Updated: 2019/06/03 16:43:40 by stenner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,6 @@ SRC = ft_atoi.c \
 		ft_toupper.c 
 SRCO = ft_atoi.o \
 		 ft_bzero.o \
-		 ft_foreach.o \
 		 ft_isalnum.o \
 		 ft_isalpha.o \
 		 ft_isascii.o \
@@ -194,22 +193,19 @@ OUTPUT = ft_atoi.o \
 		 ft_strtrim.o \
 		 ft_tolower.o \
 		 ft_toupper.o 
-EXEC = a.out
+
 FLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) -c $(SRC)
-	ar rc $(NAME) $(SRCO)
+	@gcc $(FLAGS) -c $(SRC)
+	@ar rc $(NAME) $(SRCO)
 
 clean:
-	rm -f $(SRCO)
+	@rm -f $(SRCO)
 
 fclean: clean
-	rm -f $(NAME)
-
-ffclean: fclean
-	rm -f $(EXEC)
+	@rm -f $(NAME)
 
 re:	ffclean all

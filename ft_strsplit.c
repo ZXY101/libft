@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 17:39:19 by stenner           #+#    #+#             */
-/*   Updated: 2019/05/31 11:59:02 by stenner          ###   ########.fr       */
+/*   Updated: 2019/06/10 15:32:21 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ static int	count_elements(char const *s, char c)
 				i++;
 			count++;
 		}
-		i++;
+		else
+			i++;
 	}
 	return (count);
 }
@@ -72,7 +73,7 @@ char		**ft_strsplit(char const *s, char c)
 	if (!s || !c)
 		return (NULL);
 	element_count = count_elements(s, c);
-	array = (char**)malloc(sizeof(char*) * element_count);
+	array = (char**)malloc(sizeof(char*) * element_count + 1);
 	if (!array)
 		return (NULL);
 	array = make_array(s, c, element_count, array);

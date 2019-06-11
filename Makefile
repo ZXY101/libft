@@ -6,12 +6,12 @@
 #    By: stenner <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/17 13:35:09 by stenner           #+#    #+#              #
-#    Updated: 2019/06/03 16:43:40 by stenner          ###   ########.fr        #
+#    Updated: 2019/06/11 14:16:45 by stenner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-INC = libft.h
+
 SRC = ft_atoi.c \
 		ft_bzero.c \
 		ft_isalnum.c \
@@ -70,7 +70,13 @@ SRC = ft_atoi.c \
 		ft_strsub.c \
 		ft_strtrim.c \
 		ft_tolower.c \
-		ft_toupper.c 
+		ft_toupper.c \
+		ft_isprime.c \
+		ft_foreachi.c \
+		ft_foreachs.c \
+		ft_factorial.c \
+		ft_sqrt.c
+
 SRCO = ft_atoi.o \
 		 ft_bzero.o \
 		 ft_isalnum.o \
@@ -129,7 +135,12 @@ SRCO = ft_atoi.o \
 		 ft_strsub.o \
 		 ft_strtrim.o \
 		 ft_tolower.o \
-		 ft_toupper.o 
+		 ft_toupper.o \
+		 ft_isprime.o \
+		 ft_foreachi.o \
+		 ft_foreachs.o \
+		 ft_factorial.o \
+		 ft_sqrt.o
 
 FLAGS = -Wall -Werror -Wextra
 

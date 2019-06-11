@@ -6,7 +6,7 @@
 #    By: stenner <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/17 13:35:09 by stenner           #+#    #+#              #
-#    Updated: 2019/06/11 14:16:45 by stenner          ###   ########.fr        #
+#    Updated: 2019/06/11 15:10:17 by stenner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,8 @@ SRC = ft_atoi.c \
 		ft_foreachi.c \
 		ft_foreachs.c \
 		ft_factorial.c \
-		ft_sqrt.c
+		ft_sqrt.c \
+		ft_power.c
 
 SRCO = ft_atoi.o \
 		 ft_bzero.o \
@@ -140,7 +141,8 @@ SRCO = ft_atoi.o \
 		 ft_foreachi.o \
 		 ft_foreachs.o \
 		 ft_factorial.o \
-		 ft_sqrt.o
+		 ft_sqrt.o \
+		 ft_power.o
 
 FLAGS = -Wall -Werror -Wextra
 

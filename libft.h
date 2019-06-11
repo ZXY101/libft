@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:42:10 by stenner           #+#    #+#             */
-/*   Updated: 2019/06/11 14:16:17 by stenner          ###   ########.fr       */
+/*   Updated: 2019/06/11 15:31:11 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_numlen(long num);
 int					ft_isprime(long num);
 int					ft_factorial(int num);
+long				ft_power(long base, long exp);
 size_t				ft_sqrt(size_t num);
 void				ft_foreachi(int *arr, size_t n, void (*f)(int));
 void				ft_foreachs(char *arr, size_t n, void (*f)(char));

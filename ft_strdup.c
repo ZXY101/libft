@@ -6,13 +6,13 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 07:41:48 by stenner           #+#    #+#             */
-/*   Updated: 2019/06/10 16:18:02 by stenner          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:45:38 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	char	*str;

@@ -6,7 +6,7 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:42:10 by stenner           #+#    #+#             */
-/*   Updated: 2019/06/11 15:31:11 by stenner          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:49:04 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
-char				*ft_strdup(char *src);
+char				*ft_strdup(const char *src);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strchr(const char *s, int c);
@@ -112,7 +112,7 @@ int					ft_numlen(long num);
 int					ft_isprime(long num);
 int					ft_factorial(int num);
 long				ft_power(long base, long exp);
-size_t				ft_sqrt(size_t num);
+long				ft_sqrt(long num);
 void				ft_foreachi(int *arr, size_t n, void (*f)(int));
 void				ft_foreachs(char *arr, size_t n, void (*f)(char));
 #endif

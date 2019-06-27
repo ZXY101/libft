@@ -6,15 +6,15 @@
 /*   By: stenner <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:17:01 by stenner           #+#    #+#             */
-/*   Updated: 2019/06/11 14:27:51 by stenner          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:46:38 by stenner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-size_t	ft_sqrt(size_t num)
+long	ft_sqrt(long num)
 {
-	size_t i;
+	long i;
 
 	if (num < 0)
 		return (0);
